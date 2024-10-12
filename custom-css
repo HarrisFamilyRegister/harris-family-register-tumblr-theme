@@ -1,0 +1,226 @@
+/* Root Variables */
+:root {
+    /* Colors */
+    --color-text-main: #ececeb !important;
+    --color-background: #131314 !important;
+    --color-border: #ececeb !important;
+    --color-link: #ececeb !important;
+    --color-link-hover: #ffffff !important;
+
+    /* Typography */
+    --font-primary: 'IM Fell English', serif !important;
+    --font-secondary: 'IM Fell French Canon', serif;
+}
+
+/* Global Styles */
+body {
+    font-family: var(--font-primary) !important;
+    background-color: var(--color-background) !important;
+    color: var(--color-text-main) !important;
+}
+
+/* Header Styles */
+h1 {
+    color: var(--color-text-main) !important;
+}
+
+/* Link Styles */
+a {
+    color: var(--color-link) !important;
+}
+a:hover {
+    color: var(--color-link-hover) !important;
+}
+
+/* Post and Wrapper Styles */
+#posts,
+.main,
+.post-wrapper,
+.reblog-list,
+.post-reblog-trail-item,
+.post-reblog-header,
+.caption,
+.inline-meta.post-extra,
+.inline-meta.post-extra.has-tags,
+.pop,
+.pop-menu,
+.post {
+    background-color: var(--color-background) !important; /* Ensure consistent background color */
+    color: var(--color-text-main) !important; /* Ensure consistent text color */
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+
+/* Specific Styles */
+.caption {
+    padding: 10px; /* Optional: Add padding for better spacing */
+}
+
+.post {
+    border-radius: 10px; /* Rounded corners for the post section */
+    overflow: hidden; /* Ensure child elements respect the border radius */
+}
+
+.post-content {
+    margin: 20px 0;
+    border: 1px solid var(--color-border); /* Border color */
+    border-radius: 10px; /* Rounded corners for the post content */
+    padding: 15px; /* Optional: Add padding for better spacing */
+    box-shadow: 0 0 3px rgba(236, 236, 235, 0.3), 0 0 5px rgba(236, 236, 235, 0.2); /* Subtle glow effect */
+}
+
+/* Avatar Styles */
+.post-avatar {
+    border: 2px solid var(--color-border); /* Border color */
+    border-radius: 50%; /* Make it circular */
+}
+
+/* Text Styles */
+.post-tumblelog-name,
+.link-title,
+.blog-title a,
+.description,
+.search-no-results,
+.likes-no-likes,
+.related-posts-wrapper > h2,
+.loader .loader-bar,
+.widget-title,
+.tagged-page-cta .tagged-page-cta-desc,
+.tagged-page-cta .tagged-page-cta-tag {
+    color: var(--color-text-main) !important; /* Use root variable for text color */
+}
+
+.tagged-page-cta .tagged-page-cta-tag {
+    border-color: var(--color-border) !important; /* Use root variable for border color */
+}
+
+/* Inactive User Styles */
+.inactive {
+    opacity: 0.5; /* Make inactive users appear faded */
+}
+
+/* Pagination and Navigation Styles */
+#pagination a,
+.nav-wrapper .nav-item .label {
+    color: var(--color-link) !important; /* Use root variable for link color */
+}
+
+.nav-fixed {
+    background-color: var(--color-background) !important; /* Use root variable for sticky nav background color */
+}
+
+/* Post Footer and Inline Meta Styles */
+.post-footer,
+.inline-meta.post-extra {
+    padding: 10px; /* Optional: Add padding for better spacing */
+    border: 1px solid #ECECEB; /* Optional: Add a border for separation */
+}
+
+.inline-meta.post-extra.has-tags {
+    font-family: var(--font-primary); /* Force IM Fell English font */
+    color: #ECECEB; /* Text color */
+    padding: 10px; /* Optional: Add padding for better spacing */
+    border-radius: 5px; /* Optional: Rounded corners */
+    background-color: #131314; /* Background color */
+}
+
+/* Link Styles in Inline Meta */
+.inline-meta.post-extra.has-tags a {
+    color: #ECECEB; /* Text color for links */
+    text-decoration: none; /* Remove underline */
+    text-shadow: 0 0 3px rgba(236, 236, 235, 0.5), 0 0 5px rgba(236, 236, 235, 0.3); /* Subtle glow effect */
+}
+
+.inline-meta.post-extra.has-tags a:hover {
+    color: #ffffff; /* Change color on hover for better visibility */
+    text-shadow: 0 0 5px rgba(236, 236, 235, 0.6), 0 0 8px rgba(236, 236, 235, 0.4); /* Enhanced glow effect on hover */
+}
+
+/* Pop Menu Styles */
+.pop {
+    padding: 10px; /* Optional: Add padding for better spacing */
+}
+
+.pop .share.selector {
+    color: #ECECEB; /* Text color for the share link */
+    background-color: #1a1a1a; /* Darker background for the share link */
+    padding: 10px; /* Add padding for better spacing */
+    text-decoration: none; /* Remove underline */
+}
+
+.pop-menu {
+    border: 1px solid #ECECEB; /* Optional: Add a border for separation */
+    padding: 10px; /* Optional: Add padding for better spacing */
+}
+
+/* Styles for the list items in the pop menu */
+.pop-menu ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.pop-menu ul li {
+    margin: 5px 0; /* Space between list items */
+}
+
+.pop-menu ul li a {
+    color: #ECECEB; /* Text color for links in the pop menu */
+    text-decoration: none; /* Remove underline */
+    padding: 5px; /* Optional: Add padding for better spacing */
+    display: block; /* Make the link fill the list item */
+}
+
+.pop-menu ul li a:hover {
+    background-color: #1a1a1a; /* Background color on hover */
+}
+/* Styles for inline-meta post-extra */
+.inline-meta.post-extra {
+    color: #ECECEB; /* Text color */
+    text-shadow: 0 0 3px rgba(236, 236, 235, 0.5), 0 0 5px rgba(236, 236, 235, 0.3); /* Subtle glow effect */
+    padding: 10px; /* Optional: Add padding for better spacing */
+    border: none; /* Remove any border */
+}
+
+/* Styles for panel */
+.panel {
+    color: #ECECEB; /* Text color */
+    text-shadow: 0 0 3px rgba(236, 236, 235, 0.5), 0 0 5px rgba(236, 236, 235, 0.3); /* Subtle glow effect */
+    border: none; /* Remove any border */
+}
+
+/* Styles for post footer */
+.post-footer {
+    color: #ECECEB; /* Text color */
+    text-shadow: 0 0 3px rgba(236, 236, 235, 0.5), 0 0 5px rgba(236, 236, 235, 0.3); /* Subtle glow effect */
+    padding: 10px; /* Optional: Add padding for better spacing */
+    border: none; /* Ensure no border for the post footer */
+}
+.inline-meta.post-extra {
+    color: #ECECEB; /* Text color */
+    padding: 10px; /* Optional: Add padding for better spacing */
+    background-color: #131314; /* Optional: Background color for contrast */
+}
+
+.inline-meta.post-extra a {
+    color: #ECECEB; /* Text color for links */
+    text-decoration: none; /* Remove underline */
+    text-shadow: 0 0 3px rgba(236, 236, 235, 0.5), 0 0 5px rgba(236, 236, 235, 0.3); /* Subtle glow effect */
+}
+
+.inline-meta.post-extra a:hover {
+    color: #ffffff; /* Change color on hover for better visibility */
+    text-shadow: 0 0 5px rgba(236, 236, 235, 0.6), 0 0 8px rgba(236, 236, 235, 0.4); /* Enhanced glow effect on hover */
+}
+
+.inline-meta.post-extra span {
+    color: #ECECEB; /* Text color for spans */
+    text-shadow: 0 0 3px rgba(236, 236, 235, 0.5), 0 0 5px rgba(236, 236, 235, 0.3); /* Subtle glow effect */
+}
+/* Round corners for embedded videos */
+iframe,
+video {
+    border-radius: 10px; /* Adjust the value for more or less rounding */
+    overflow: hidden; /* Ensure content respects the border radius */
+    margin-top: -10px; /* Push the video up */
+    width: calc(100% + 10px); /* Make the video a bit wider */
+}
