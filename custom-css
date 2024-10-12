@@ -3,7 +3,6 @@
     /* Colors */
     --color-text-main: #ececeb !important;
     --color-background: #131314 !important;
-    --color-border: #ececeb !important;
     --color-link: #ececeb !important;
     --color-link-hover: #ffffff !important;
 
@@ -33,9 +32,27 @@ a:hover {
 }
 
 /* Post and Wrapper Styles */
-#posts,
-.main,
-.post-wrapper,
+#posts {
+    background-color: var(--color-background) !important; /* Ensure consistent background color */
+    color: var(--color-text-main) !important; /* Ensure consistent text color */
+}
+
+.main {
+    background-color: var(--color-background) !important; /* Ensure consistent background color */
+    color: var(--color-text-main) !important;
+    position: relative; /* Ensure positioning context for the glow */
+    box-shadow: 0 0 10px rgba(236, 236, 235, 0.5), 0 0 20px rgba(236, 236, 235, 0.3); /* Glow effect */
+    border-radius: 10px; /* Optional: Rounded corners for the main container */
+    overflow: hidden; /* Ensure child elements respect the border radius */
+}
+
+.post-wrapper {
+    background-color: var(--color-background) !important; /* Ensure consistent background color */
+    color: var(--color-text-main) !important; /* Ensure consistent text color */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+}
+
 .reblog-list,
 .post-reblog-trail-item,
 .post-reblog-header,
@@ -47,7 +64,8 @@ a:hover {
 .post {
     background-color: var(--color-background) !important; /* Ensure consistent background color */
     color: var(--color-text-main) !important; /* Ensure consistent text color */
-    border-radius: 5px; /* Optional: Rounded corners */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
 }
 
 /* Specific Styles */
@@ -56,21 +74,18 @@ a:hover {
 }
 
 .post {
-    border-radius: 10px; /* Rounded corners for the post section */
     overflow: hidden; /* Ensure child elements respect the border radius */
 }
 
 .post-content {
-    margin: 20px 0;
-    border: 1px solid var(--color-border); /* Border color */
-    border-radius: 10px; /* Rounded corners for the post content */
+    margin: 0; /* Remove margin to eliminate space above and below */
+    border: none; /* Remove border */
     padding: 15px; /* Optional: Add padding for better spacing */
     box-shadow: 0 0 3px rgba(236, 236, 235, 0.3), 0 0 5px rgba(236, 236, 235, 0.2); /* Subtle glow effect */
 }
 
 /* Avatar Styles */
 .post-avatar {
-    border: 2px solid var(--color-border); /* Border color */
     border-radius: 50%; /* Make it circular */
 }
 
@@ -89,10 +104,6 @@ a:hover {
     color: var(--color-text-main) !important; /* Use root variable for text color */
 }
 
-.tagged-page-cta .tagged-page-cta-tag {
-    border-color: var(--color-border) !important; /* Use root variable for border color */
-}
-
 /* Inactive User Styles */
 .inactive {
     opacity: 0.5; /* Make inactive users appear faded */
@@ -109,17 +120,22 @@ a:hover {
 }
 
 /* Post Footer and Inline Meta Styles */
-.post-footer,
+.post-footer {
+    padding: 10px; /* Optional: Add padding for better spacing */
+    border: none; /* Remove any border */
+    margin: 0; /* Remove any margin that might create space */
+}
+
 .inline-meta.post-extra {
     padding: 10px; /* Optional: Add padding for better spacing */
-    border: 1px solid #ECECEB; /* Optional: Add a border for separation */
+    border: none; /* Remove any border */
+    margin: 0; /* Remove any margin that might create space */
 }
 
 .inline-meta.post-extra.has-tags {
     font-family: var(--font-primary); /* Force IM Fell English font */
     color: #ECECEB; /* Text color */
     padding: 10px; /* Optional: Add padding for better spacing */
-    border-radius: 5px; /* Optional: Rounded corners */
     background-color: #131314; /* Background color */
 }
 
@@ -148,7 +164,7 @@ a:hover {
 }
 
 .pop-menu {
-    border: 1px solid #ECECEB; /* Optional: Add a border for separation */
+    border: none; /* Remove any border */
     padding: 10px; /* Optional: Add padding for better spacing */
 }
 
@@ -173,12 +189,13 @@ a:hover {
 .pop-menu ul li a:hover {
     background-color: #1a1a1a; /* Background color on hover */
 }
+
 /* Styles for inline-meta post-extra */
 .inline-meta.post-extra {
     color: #ECECEB; /* Text color */
     text-shadow: 0 0 3px rgba(236, 236, 235, 0.5), 0 0 5px rgba(236, 236, 235, 0.3); /* Subtle glow effect */
     padding: 10px; /* Optional: Add padding for better spacing */
-    border: none; /* Remove any border */
+    background-color: #131314; /* Optional: Background color for contrast */
 }
 
 /* Styles for panel */
@@ -194,28 +211,9 @@ a:hover {
     text-shadow: 0 0 3px rgba(236, 236, 235, 0.5), 0 0 5px rgba(236, 236, 235, 0.3); /* Subtle glow effect */
     padding: 10px; /* Optional: Add padding for better spacing */
     border: none; /* Ensure no border for the post footer */
-}
-.inline-meta.post-extra {
-    color: #ECECEB; /* Text color */
-    padding: 10px; /* Optional: Add padding for better spacing */
-    background-color: #131314; /* Optional: Background color for contrast */
+    margin: 0; /* Remove any margin that might create space */
 }
 
-.inline-meta.post-extra a {
-    color: #ECECEB; /* Text color for links */
-    text-decoration: none; /* Remove underline */
-    text-shadow: 0 0 3px rgba(236, 236, 235, 0.5), 0 0 5px rgba(236, 236, 235, 0.3); /* Subtle glow effect */
-}
-
-.inline-meta.post-extra a:hover {
-    color: #ffffff; /* Change color on hover for better visibility */
-    text-shadow: 0 0 5px rgba(236, 236, 235, 0.6), 0 0 8px rgba(236, 236, 235, 0.4); /* Enhanced glow effect on hover */
-}
-
-.inline-meta.post-extra span {
-    color: #ECECEB; /* Text color for spans */
-    text-shadow: 0 0 3px rgba(236, 236, 235, 0.5), 0 0 5px rgba(236, 236, 235, 0.3); /* Subtle glow effect */
-}
 /* Round corners for embedded videos */
 iframe,
 video {
